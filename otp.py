@@ -19,7 +19,7 @@ printer.setLineHeight(23) # So graphical chars fit together
 # Called when button is briefly tapped.  Prints one copy of the OTP.
 def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
-  otp = file("otp.txt")
+  otp = file("/ramdisk/otp.txt")
   printer.feed(3)
   for line in otp:
     printer.println(line)  
