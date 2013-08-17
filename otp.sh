@@ -15,7 +15,7 @@ for ((x=1; x<=$pagecount; x++))
 do  
   echo -n $bookserial >> $otpath;
   printf '%22s' $x"/"$pagecount >> $otpath;
-  echo "" >> otp.txt;
+  echo "" >> $otpath;
   for ((i=1; i<=$rowcount; i++))
   do
     for ((j=1; j<=$blockrow; j++))
